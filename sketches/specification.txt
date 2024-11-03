@@ -1,0 +1,93 @@
+stage
+	sample
+	plan
+	document
+
+project
+	name
+	client
+		name
+		email
+		address
+
+materials
+	yarn
+		brand
+		name
+		size
+		ypp
+		ravelry id
+
+warp
+	pattern
+	length on board (yds)
+	total width
+	semiwarp widths
+	per yarn and total
+		epi
+		ends = epi * width
+		end-yards = ends * length
+		weight = end-yards / epp
+
+
+Warp Pattern
+Warp Length on Board
+Semiwarp Widths
+Source Quantities
+Skarne Schema
+Count Groups
+Ends
+Warp Weight
+
+Spooling Time
+Warping Time
+
+Threading Pattern
+Sett
+Width in Reed
+Denting Schema
+Special Selvage
+
+Beaming Time
+Threading Time
+Sleying Time
+
+Tieup Pattern
+Weft Protection
+
+Mounting Time
+Proofing Time
+Prefinishing Time
+
+Treadling Pattern
+Pick Density
+Shuttle Chirality
+Shuttle Tension
+Temple Width
+Cloth Weight
+
+Weaving Time
+
+Panel Arrangement
+Wet Finishing
+
+Darning Time
+Seaming Time
+Finishing Time
+
+Finished Dimensions
+Notes (cloth quality, loom feedback, etc.)
+
+
+Date Initiated
+Revisions
+Materials Cost
+Quoted Price
+Date Sent
+Tracking Number
+Payment Status
+Feedback
+
+Time Filled
+Materials Allocated
+Redistributions

@@ -1,0 +1,19 @@
+{
+  "name": "fellline",
+  "version": "0.1.0",
+  "main": "src/index.html",
+  "type": "module",
+  "scripts": {
+    "compile:css": "lightningcss --minify --bundle --targets '>= 0.25%' src/styles/main.css -o src/styles/main-out.css",
+    "bundle:js": "esbuild src/scripts/main.js --minify --bundle --outfile=src/scripts/main-out.js",
+    "build": "npm run compile:css; npm run bundle:js; node ./build.js"
+  },
+  "author": "rosemary wexler ✿",
+  "license": "ACSL v1.4",
+  "description": "a weaving project tracker, just the way i like it",
+  "dependencies": {
+    "esbuild": "^0.24.0",
+    "lightningcss": "^1.27.0",
+    "vite": "^5.4.10"
+  }
+}

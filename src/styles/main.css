@@ -1,0 +1,72 @@
+@import './blocks/infoRow.css';
+
+html {
+  background: linear-gradient(green, yellowgreen 300%);
+  background-attachment: fixed;
+}
+body {
+  font: 18pt Avenir;
+  margin: 0;
+}
+
+#app > * {
+	margin: 1rem;
+}
+details {
+	width: fit-content;
+}
+summary, caption {
+	color: white;
+	background: #ff02;
+	padding: 1rem;
+	border: 2px solid white;
+	text-align: center;
+/*	font-weight: bolder;*/
+}
+summary { cursor: pointer; }
+[open] > summary, caption { border-bottom: none; }
+table {
+  border-collapse: collapse;
+  color: white;
+  background: #ff02;
+/*  width: 550px;*/
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+a { color: currentColor; }
+.dabs:not(:target) { display: none }
+/*.dabs { display: none; }*/
+/*.factor:nth-child(1):hover ~ div .dabs:nth-child(1) { display: inline }
+.factor:nth-child(2):hover ~ div .dabs:nth-child(2) { display: inline }
+.factor:nth-child(3):hover ~ div .dabs:nth-child(3) { display: inline }
+.factor:nth-child(4):hover ~ div .dabs:nth-child(4) { display: inline }
+.factor:nth-child(5):hover ~ div .dabs:nth-child(5) { display: inline }
+.factor:nth-child(6):hover ~ div .dabs:nth-child(6) { display: inline }
+.factor:nth-child(7):hover ~ div .dabs:nth-child(7) { display: inline }
+.factor:nth-child(8):hover ~ div .dabs:nth-child(8) { display: inline }
+*/tbody {
+	box-shadow: 0 0 1rem #fff6;
+}
+
+td, th {
+  border: 2px solid white;
+
+  &:has(input) { background: #fff2 }
+}
+
+:is(td, th):not(:has(> input:is([type="number"], [type="text"]))), 
+input[type="number"], 
+input[type="text"] {
+  padding: 1rem;
+}
+
+input[type="number"],
+input[type="text"] {
+  background: transparent;
+  color: inherit;
+  border: none;
+  font: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}

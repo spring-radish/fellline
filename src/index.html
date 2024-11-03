@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+	<link rel="icon" href="logo.svg">
+	<script type="module" src="./scripts/main.js"></script>
+	<link rel="manifest" href="fellline.json" />
+	<title>Materials</title>
+</head>
+<body>
+	<div id="app"></div>
+	<script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./scripts/pwa.js");
+      }
+    </script>
+</body>
+</html>

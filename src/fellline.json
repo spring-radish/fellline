@@ -1,0 +1,13 @@
+{
+  "name": "FellLine",
+  "start_url" : "/",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "sizes": "any"
+    }
+  ],
+  "display": "standalone",
+  "theme_color": "#108012",
+  "background_color": "#108012"
+}
