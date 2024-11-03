@@ -9,7 +9,6 @@ const CACHE_NAME = `fellline_${VERSION}`;
 // The static resources that the app needs to function.
 const APP_STATIC_RESOURCES = [
   "/",
-  "/index.html",
   "/scripts/main.js",
   "/styles/main.css",
 ];
