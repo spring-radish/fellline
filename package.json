@@ -4,8 +4,8 @@
   "main": "src/index.html",
   "type": "module",
   "scripts": {
-    "compile:css": "lightningcss --minify --bundle --targets '>= 0.25%' src/styles/main.css -o src/styles/main.css",
-    "bundle:js": "esbuild src/scripts/main.js --minify --bundle --allow-overwrite --outfile=src/scripts/main.js",
+    "compile:css": "lightningcss --minify --bundle --targets '>= 0.25%' src/styles/main.css -o dist/styles/main.css",
+    "bundle:js": "esbuild src/scripts/main.js --minify --bundle --allow-overwrite --outfile=dist/scripts/main.js",
     "build": "npm run compile:css; npm run bundle:js; node ./build.js"
   },
   "author": "rosemary wexler ✿",

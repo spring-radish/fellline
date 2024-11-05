@@ -93,3 +93,5 @@ document.addEventListener('input', (e) => {
 
 	window.localStorage.setItem(key, value)
 })
+
+console.log(data)
