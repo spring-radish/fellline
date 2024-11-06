@@ -13,6 +13,7 @@
   "description": "a weaving project tracker, just the way i like it",
   "dependencies": {
     "esbuild": "^0.24.0",
-    "lightningcss": "^1.27.0"
+    "lightningcss": "^1.27.0",
+    "lightningcss-cli": "^1.28.1"
   }
 }
