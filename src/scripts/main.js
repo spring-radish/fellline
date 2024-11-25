@@ -38,20 +38,61 @@ component('#app', () => {
 })
 
 document.addEventListener('input', (e) => {
+
 	const key = e.target.name || e.target.id
 	const value = e.target.value
 
+	if (projects.current[key] === null) return
+
 	console.log(key, 'is', value)
-	data[key] = value
+	projects.current[key] = value
 
 	switch (e.target.id) {
 		case 'epi':
-			data.proxy_epi = false;
-			window.localStorage.setItem('proxy_epi', false)
+			projects.current.proxy_epi = false;
 			break
 	}
 
-	window.localStorage.setItem(key, value)
+	window.localStorage.setItem(projects.current.id, JSON.stringify(projects.current))
 })
 
-console.log(data)
+document.addEventListener('click', (e) => {
+	console.log(e.target.id)
+	switch (e.target.id) {
+		case 'save':
+			e.stopPropagation()
+			const project = unwrapObjectProxy(projects)
+			if (!project.project_name) throw Error('Untitled project')
+			projects[project.project_name] = project
+			console.log(projects)
+			return
+		case 'new':
+			e.stopPropagation()
+			const id = window.crypto.randomUUID()
+			console.log(id)
+			projects.others[projects.current.id] = projects.current
+			projects.current = {
+				id: id,
+				project_name: '',
+				materials: '',
+				warp_length: 7,
+				warp_width: 36,
+				epi: 24,
+				ypp: 5800,
+				spools: null,
+				proxy_epi: null,
+				proxy_spools: null,
+			}
+			return
+	}
+	// the 'retrieve' case
+	if (e.target.classList.contains('proj-select')) {
+		const id = e.target.id
+		projects.others[projects.current.id] = {...projects.current}
+		projects.current = {...projects.others[id]}
+		projects.others[id] = null
+		console.log('current project is', projects.current)
+	}
+})
+
+console.log(projects)
