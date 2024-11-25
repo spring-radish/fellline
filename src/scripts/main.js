@@ -4,6 +4,12 @@ import { unwrapObjectProxy, loadProjects } from './storage.js'
 
 import specTable from './components/specTable.js'
 import projectList from './components/projectList.js'
+
+let projects = signal(loadProjects());
+
+/**
+{current: {
+	id: window.crypto.randomUUID(),
 	project_name: '',
 	materials: '',
 	warp_length: 7,
@@ -13,7 +19,8 @@ import projectList from './components/projectList.js'
 	spools: null,
 	proxy_epi: null,
 	proxy_spools: null,
-}))
+}, others: {}}
+ */
 
 function load (obj) {
 	const s = window.localStorage
